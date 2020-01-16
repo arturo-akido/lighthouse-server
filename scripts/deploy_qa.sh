@@ -10,7 +10,7 @@ DEPLOY_BRANCH=${1:-master} # default to master branch but allow any branch.
 APP_NAME="lighthouse-ci"
 DEPLOY_ENVIRONMENT=qa
 
-DOKKU_USES_POSTGRES=false
+DOKKU_USES_POSTGRES=true
 DOKKU_USES_REDIS=true
 
 DOKKU_HOST="qa-dokku.dev.corp.akidolabs.com"
