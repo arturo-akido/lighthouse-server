@@ -25,7 +25,7 @@ ${DOKKU_CMD} -- docker-options:add ${APP_NAME} deploy "-v /mnt/akido/ssl/dokku-c
 
 ${DOKKU_CMD} -- config:set --no-restart \
   ${APP_NAME} \
-  DOKKU_PROXY_PORT_MAP="http:80:5000 https:443:5000" \
+  DOKKU_PROXY_PORT_MAP=\"http:80:5000 https:443:5000\" \
   || FAIL
 
 dokku_git_push || fail
