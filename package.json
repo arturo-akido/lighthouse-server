@@ -6,8 +6,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "@lhci/server": "^0.3.8",
-    "pg": "^7.12.1",
-    "pg-hstore": "^2.3.3"
+    "@lhci/server": "^0.8.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4"
   }
 }
