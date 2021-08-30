@@ -19,7 +19,11 @@ DOKKU_CMD="ssh dokku@${DOKKU_HOST}"
 git_merge_origin
 
 dokku_destroy_first
-dokku_create_app || fail
+dokku_create_app_and_database || fail
+
+$DOKKU_CMD -- config:set --no-restart ${APP_NAME} \
+  || FAIL
+  
 dokku_git_push || fail
 
 echo "Deploy completed"
