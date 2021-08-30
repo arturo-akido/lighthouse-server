@@ -15,8 +15,10 @@ createServer({
     sqlDialect: 'postgres',
     sqlConnectionSsl: true,
     sqlDialectOptions: {
-      ssl: true,
-      rejectUnauthorized: false,
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
     },
     sqlConnectionUrl: process.env.DATABASE_URL,
   },
